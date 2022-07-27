@@ -1,0 +1,85 @@
+<div>
+
+    <nav class="my-navbar mx-auto newNav navbar ">
+        <div class="container-fluid border-bottom ">
+            <span class="navbar-brand mb-0 h1 d-block mx-auto">SOCIAL MOTIVATION
+                    SERVICE</span>
+        </div>
+    </nav>
+    
+    
+    <nav class="my-navbar navbar navbar-expand-lg navbar-border">
+        <div class="container-fluid ">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{% url 'about'%}" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            ABOUT US
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'about'%}#about-us">ABOUT SMS</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about'%}#story">STORY</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about'%}#mission-vission">MISSION AND VISION</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">FOUNDERS</a></li>
+                            <li><a class="dropdown-item" href="#">COMMITTEE MEMBERS</a></li>
+                            <li><a class="dropdown-item" href="#">VOLUNTEERS</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            PROJECTS
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">ONGOING PROJECTS</a></li>
+                            <li><a class="dropdown-item" href="#">PREVIOUS PROJECTS</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">NEWS AND EVENTS</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">DONORS AND PARTNERSHIPS</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">CONTACT US</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            GALLERY
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">IMAGES</a></li>
+                            <li><a class="dropdown-item" href="#">VIDEOS</a></li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+</div>
