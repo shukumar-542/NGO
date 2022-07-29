@@ -34,9 +34,9 @@
                             <li><a class="dropdown-item" href="{% url 'about'%}#story">STORY</a></li>
                             <li><a class="dropdown-item" href="{% url 'about'%}#mission-vission">MISSION AND VISION</a>
                             </li>
-                            <li><a class="dropdown-item" href="#">FOUNDERS</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about'%}#founder">FOUNDERS</a></li>
                             <li><a class="dropdown-item" href="#">COMMITTEE MEMBERS</a></li>
-                            <li><a class="dropdown-item" href="#">VOLUNTEERS</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about'%}#volunteer">VOLUNTEERS</a></li>
                         </ul>
                     </li>
 
@@ -57,7 +57,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link">DONORS AND PARTNERSHIPS</a>
+                        <a href="{% url 'donor-parntership'%}" class="nav-link">DONORS AND PARTNERSHIPS</a>
                     </li>
 
                     <li class="nav-item">

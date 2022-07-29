@@ -7,3 +7,6 @@ class home(TemplateView):
 
 class about(TemplateView):
       template_name='clientSite/about.html'
+
+class donorPartnership(TemplateView):
+      template_name ='clientSite/donor-partner.html'

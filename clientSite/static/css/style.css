@@ -98,3 +98,33 @@
 .img-translate:hover{
     transform: translate(0px,50px);
 }
+
+
+/* volunteer */
+
+.icon-color , .volunteer{
+    color: #ab8cf2;
+    text-decoration: none;
+}
+.icon-color:hover{
+    color: white;
+} 
+   .volunteer-img{
+    width: 60% !important;
+    height: 80% !important;
+    border-radius: 50% !important;
+    position: relative;
+    left:18%;
+    top:-75px;
+    border: 5px solid silver ;
+   }
+   #volunteer{
+    background-color: silver;
+    padding-top: 20px;
+   }
+   #volunteer .card:hover{
+    background-color: #03181a;
+    color:#EEEEEE ;
+}
+
+
