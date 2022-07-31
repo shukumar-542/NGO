@@ -1,0 +1,90 @@
+{% extends 'clientSite/base.html' %}
+{% load static %}
+{% block main %}
+      <section id="contact-top">
+            <img class="img-fluid" src="{% static 'images/contact.jpg' %}" alt="">
+      </section>
+      <section id="contact-sms" class="my-5 ">
+            <div class="container-fluid border-bottom  p-5">
+                  <div class="row row-cols-1 row-cols-md-2">
+                        <div class="col-md-8">
+                              <h1>Get In Touch</h1>
+                              <form action="">
+                                    <div class="mb-4">
+                                          <label for="name" class="form-label text-muted">Name</label>
+                                          <input type="text"
+                                                 class="form-control"
+                                                 id="name"
+                                                 placeholder="Enter Your Name">
+                                    </div>
+                                    <div class="mb-4">
+                                          <label for="name" class="form-label text-muted">Phone</label>
+                                          <input type="text"
+                                                 class="form-control"
+                                                 id="name"
+                                                 placeholder="Enter Your Phone">
+                                    </div>
+                                    <div class="mb-4">
+                                          <label for="exampleFormControlInput1" class="form-label text-muted">Email</label>
+                                          <input type="email"
+                                                 class="form-control"
+                                                 id="exampleFormControlInput1"
+                                                 placeholder="name@example.com">
+                                    </div>
+                                    <div class="mb-4">
+                                          <label for="exampleFormControlTextarea1" class="form-label text-muted">Messages</label>
+                                          <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Write Your Message.. " rows="3"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                              </div>
+                              
+                        <div class="col-md-4  d-flex justify-content-center">
+                              <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+                                    <div class="card-header ">Contact Details</div>
+                                    <div class="card-body">
+                                      <h5 class="card-title mb-3 ">Address</h5>
+                                      <address class="card-text mb-5"> <small > 98 West 21th Street, <br>
+                                          Suite 721 <br>
+                                          New York NY 10016 </small></address>
+                                          <h5 class="card-title mb-3">EMAIL US</h5>
+                                          <p class="card-text contact-mail mb-5">
+                                                <a href="mailto:info@yourdomain.com">info@yourdomain.com</a>
+                                                  <a href="mailto:customer@yourdomain.com">customer@yourdomain.com</a>
+                      
+                                              </p> 
+                                              <h5 class="card-title mb-3">CALL US</h5>
+                                              <p class="card-text ">
+                                                  Phone: (+1) 435 3533 <br>
+                                                  Mobile: (+1) 435 3533 <br>
+                                                  Fax: (+1) 435 3534
+                                              </p>
+                                    </div>
+                                  </div>
+
+{% comment %}     <div class="card-body">
+                        <h5 class="card-title mb-3">ADDRESS</h5>
+                        <address class="card-text mb-5"> <small class="text-muted"> 98 West 21th Street, <br>
+                                Suite 721 <br>
+                                New York NY 10016 </small></address>
+
+                        <h5 class="card-title mb-3">EMAIL US</h5>
+                        <p class="card-text contact-mail mb-5">
+                          <a href="mailto:info@yourdomain.com">info@yourdomain.com</a>
+                            <a href="mailto:customer@yourdomain.com">customer@yourdomain.com</a>
+
+                        </p>  
+                        <h5 class="card-title mb-3">CALL US</h5>
+                        <p class="card-text text-muted">
+                            Phone: (+1) 435 3533 <br>
+                            Mobile: (+1) 435 3533 <br>
+                            Fax: (+1) 435 3534
+                        </p>
+
+                    </div> {% endcomment %}
+
+                        </div>
+                  </div>
+            </div>
+      </section>
+{% endblock main %}
