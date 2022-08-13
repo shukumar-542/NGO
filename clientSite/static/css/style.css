@@ -295,3 +295,32 @@
 .card-body a:hover{
     color: #dc3545;
 }
+
+/* projects */
+
+
+.project-header{
+    color: rgb(14, 14, 240);
+    padding:0.2rem;
+    padding-left: 1.5rem;
+    background-color: rgb(166, 168, 163);   
+}
+
+/* image and video gallary */
+
+#vdo-gallery {
+    margin-top: 20px ;
+    width:100% !important;   
+}
+#vdo-gallery h1{
+    color: #dc3545;
+    border-bottom: 2px solid #dc3545;
+    text-transform: uppercase;
+    letter-spacing: 1px;    
+    padding: 30px 0;
+}
+
+
+
+  
+

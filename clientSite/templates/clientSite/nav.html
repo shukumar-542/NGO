@@ -46,14 +46,14 @@
                             PROJECTS
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">ONGOING PROJECTS</a></li>
-                            <li><a class="dropdown-item" href="#">PREVIOUS PROJECTS</a></li>
+                            <li><a class="dropdown-item" href="{% url 'projects' 'ongoing'%}">ONGOING PROJECTS</a></li>
+                            <li><a class="dropdown-item" href="{% url 'projects' 'previous' %}">PREVIOUS PROJECTS</a></li>
 
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link " href="#">NEWS AND EVENTS</a>
+                        <a class="nav-link " href="{% url 'news'%}">NEWS AND EVENTS</a>
                     </li>
 
                     <li class="nav-item">
@@ -70,8 +70,8 @@
                             GALLERY
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">IMAGES</a></li>
-                            <li><a class="dropdown-item" href="#">VIDEOS</a></li>
+                            <li><a class="dropdown-item" href="{% url 'image_gallary'%}">IMAGES</a></li>
+                            <li><a class="dropdown-item" href="{% url 'video_gallary'%}">VIDEOS</a></li>
 
                         </ul>
                     </li>

@@ -18,13 +18,17 @@ class Projects(TemplateView):
       template_name ='clientSite/projects.html'
       def get_context_data(self, **kwargs):
             context = super().get_context_data(**kwargs)
-
-        # for Dynamic url argument value
-            type = kwargs
-            myType = context["type"]
-
             return context
+
+class Projects_details(TemplateView):
+      template_name ='clientSite/projects-details.html'
 
 class news(TemplateView):
       template_name ='clientSite/news.html'
+      
+class image_gallary(TemplateView):
+      template_name ='clientSite/image-gallary.html'
+
+class video_gallary(TemplateView):
+      template_name ='clientSite/video-gallery.html'
 

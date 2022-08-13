@@ -1,120 +1,141 @@
 {% extends 'clientSite/base.html' %}
 {% load static %}
 {% block main %}
-
-<section id="projects">
-
-      <h1 class="text-uppercase project-header mb-5 ">{{type}} PROJECTS</h1>
-      <div class="container">
-          <div class="col">
-  
-              <div class="row">
-                  <div class="card mb-3 border-0 shadow " style="max-width: 90%;">
-                      <div class="row g-0">
-                          <div class="col-md-4 overflow-hidden ">
-                              <img src="{% static 'ngo\images\gaas.jpg' %}" class="img-fluid w-100" alt="...">
-                          </div>
-                          <div class="col-md-8">
-                              <div class="card-body">
-                                  <h5 class="card-title"><a href="{% url 'project_details' 1 %}">Promotion of Sustainable
-                                          Agriculture
-                                          Practice (SAP)
-                                          with Less Irrigation Water</a></h5>
-                                  <p class="card-text">We would like to convey our heartiest gratitude to Ministry of
-                                      Foreign Affairs (MoFA) Japan, Asia Arsenic Network (AAN) & Share the Planet
-                                      Association (SPA) Japan for supporting us financially and technically with the PSAP.
-                                      Farmers are benefitted by soil test based fertilizer management and able to reduce
-                                      fertilizer cost.</p>
-                                  <a href="{% url 'project_details' 1 %}" class="card-text"><small class="text-muted">Read
-                                          More</small></a>
+      <section id="projects">
+            <h1 class="text-uppercase project-header mb-5 ">{{ type }} PROJECTS</h1>
+            <div class="container">
+                  <div class="col">
+                        <div class="row">
+                              <div class="card mb-3 border-0 shadow " style="max-width: 90%;">
+                                    <div class="row g-0">
+                                          <div class="col-md-4 overflow-hidden ">
+                                                <img src="{% static 'images\gaas.jpg' %}"
+                                                     class="img-fluid w-100"
+                                                     alt="...">
+                                          </div>
+                                          <div class="col-md-8">
+                                                <div class="card-body">
+                                                      <h5 class="card-title">
+                                                            <a href="">Promotion of Sustainable
+                                                                  Agriculture
+                                                                  Practice (SAP)
+                                                            with Less Irrigation Water</a>
+                                                      </h5>
+                                                      <p class="card-text">
+                                                            We would like to convey our heartiest gratitude to Ministry of
+                                                            Foreign Affairs (MoFA) Japan, Asia Arsenic Network (AAN) & Share the Planet
+                                                            Association (SPA) Japan for supporting us financially and technically with the PSAP.
+                                                            Farmers are benefitted by soil test based fertilizer management and able to reduce
+                                                            fertilizer cost.
+                                                      </p>
+                                                      <a href="{% url 'projects-details' 1 %}" class="card-text"><small class="text-muted">Read
+                                                      More</small></a>
+                                                </div>
+                                          </div>
+                                    </div>
                               </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-  
-              <div class="row">
-                  <div class="card mb-3 border-0 shadow " style="max-width: 90%;">
-                      <div class="row g-0">
-                          <div class="col-md-4 overflow-hidden">
-                              <img src="{% static 'ngo\images\meet.jpg' %}" class="img-fluid w-100" alt="...">
-                          </div>
-                          <div class="col-md-8">
-                              <div class="card-body">
-                                  <h5 class="card-title"><a href="{% url 'project_details' 1 %}">AID LPG Project</a></h5>
-                                  <p class="card-text">AID Foundation are offering a revolutionary household LPG cylinder
-                                      solution with a wide range of benefits, keeping consumer needs in mind. The Beximco
-                                      Smart Cylinder™ is a reflection of Beximco Petroleum's commitment to innovation and
-                                      is the latest technology in this industry, making every consumer's life safer &
-                                      easier. AID Foundation</p>
-                                  <a href="{% url 'project_details' 1 %}" class="card-text"><small class="text-muted">Read
-                                          More</small></a>
+                        </div>
+                        <div class="row">
+                              <div class="card mb-3 border-0 shadow " style="max-width: 90%;">
+                                    <div class="row g-0">
+                                          <div class="col-md-4 overflow-hidden">
+                                                <img src="{% static 'images\meet.jpg' %}"
+                                                     class="img-fluid w-100"
+                                                     alt="...">
+                                          </div>
+                                          <div class="col-md-8">
+                                                <div class="card-body">
+                                                      <h5 class="card-title">
+                                                            <a href="">AID LPG Project</a>
+                                                      </h5>
+                                                      <p class="card-text">
+                                                            AID Foundation are offering a revolutionary household LPG cylinder
+                                                            solution with a wide range of benefits, keeping consumer needs in mind. The Beximco
+                                                            Smart Cylinder� is a reflection of Beximco Petroleum's commitment to innovation and
+                                                            is the latest technology in this industry, making every consumer's life safer &
+                                                            easier. AID Foundation
+                                                      </p>
+                                                      <a href="{% url 'projects-details' 1 %}" class="card-text"><small class="text-muted">Read
+                                                      More</small></a>
+                                                </div>
+                                          </div>
+                                    </div>
                               </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="card mb-3 border-0 shadow " style="max-width: 90%;">
-                      <div class="row g-0">
-                          <div class="col-md-4 overflow-hidden">
-                              <img src="{% static 'ngo\images\saap.jpg' %}" class="img-fluid w-100" alt="...">
-                          </div>
-                          <div class="col-md-8">
-                              <div class="card-body">
-                                  <h5 class="card-title"><a href="{% url 'project_details' 1 %}">ART AND CULTURE</a></h5>
-                                  <p class="card-text">Every nation has its own traditional art and cultures. No nation
-                                      can be progressed by neglecting their traditional art and culture. It is always an
-                                      inspiration of the present generation to go ahead. With the advancement of knowledge
-                                      and technology of human being this may be developed or get a</p>
-                                  <a href="{% url 'project_details' 1 %}" class="card-text"><small class="text-muted">Read
-                                          More</small></a>
+                        </div>
+                        <div class="row">
+                              <div class="card mb-3 border-0 shadow " style="max-width: 90%;">
+                                    <div class="row g-0">
+                                          <div class="col-md-4 overflow-hidden">
+                                                <img src="{% static 'images\saap.jpg' %}"
+                                                     class="img-fluid w-100"
+                                                     alt="...">
+                                          </div>
+                                          <div class="col-md-8">
+                                                <div class="card-body">
+                                                      <h5 class="card-title">
+                                                            <a href="">ART AND CULTURE</a>
+                                                      </h5>
+                                                      <p class="card-text">
+                                                            Every nation has its own traditional art and cultures. No nation
+                                                            can be progressed by neglecting their traditional art and culture. It is always an
+                                                            inspiration of the present generation to go ahead. With the advancement of knowledge
+                                                            and technology of human being this may be developed or get a
+                                                      </p>
+                                                      <a href="{% url 'projects-details' 1 %}" class="card-text"><small class="text-muted">Read
+                                                      More</small></a>
+                                                </div>
+                                          </div>
+                                    </div>
                               </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="card mb-3 border-0 shadow " style="max-width: 90%;">
-                      <div class="row g-0">
-                          <div class="col-md-4 overflow-hidden ">
-                              <img src="{% static 'ngo\images\gaas.jpg' %}" class="img-fluid w-100" alt="...">
-                          </div>
-                          <div class="col-md-8">
-                              <div class="card-body">
-                                  <h5 class="card-title"><a href="{% url 'project_details' 1 %}">AID Improved Cooking
-                                          Stove (ICS)</a></h5>
-                                  <p class="card-text">For cooking, rural people of Bangladesh mostly depend on
-                                      traditional Chulla. This type of Chulla is comparatively inefficient for producing
-                                      heat energy but emits huge smoke which causes of our in-door air pollution affecting
-                                      women and children. Improved Cooking Stove (ICS) can protect women and children from
-                                      in-door air pollution</p>
-                                  <a href="{% url 'project_details' 1 %}" class="card-text"><small class="text-muted">Read
-                                          More</small></a>
+                        </div>
+                        <div class="row">
+                              <div class="card mb-3 border-0 shadow " style="max-width: 90%;">
+                                    <div class="row g-0">
+                                          <div class="col-md-4 overflow-hidden ">
+                                                <img src="{% static 'images\gaas.jpg' %}"
+                                                     class="img-fluid w-100"
+                                                     alt="...">
+                                          </div>
+                                          <div class="col-md-8">
+                                                <div class="card-body">
+                                                      <h5 class="card-title">
+                                                            <a href="">AID Improved Cooking
+                                                            Stove (ICS)</a>
+                                                      </h5>
+                                                      <p class="card-text">
+                                                            For cooking, rural people of Bangladesh mostly depend on
+                                                            traditional Chulla. This type of Chulla is comparatively inefficient for producing
+                                                            heat energy but emits huge smoke which causes of our in-door air pollution affecting
+                                                            women and children. Improved Cooking Stove (ICS) can protect women and children from
+                                                            in-door air pollution
+                                                      </p>
+                                                      <a href="{% url 'projects-details' 1 %}" class="card-text"><small class="text-muted">Read
+                                                      More</small></a>
+                                                </div>
+                                          </div>
+                                    </div>
                               </div>
-                          </div>
-                      </div>
+                        </div>
                   </div>
-              </div>
-          </div>
-  
-          <nav aria-label="Page navigation example">
-              <ul class="pagination justify-content-end">
-                  <li class="page-item disabled">
-                      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item">
-                      <a class="page-link" href="#">Next</a>
-                  </li>
-              </ul>
-          </nav>
-  
-  
-      </div>
-  </section>
-  
-
+                  <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-end">
+                              <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                              </li>
+                              <li class="page-item">
+                                    <a class="page-link" href="#">1</a>
+                              </li>
+                              <li class="page-item">
+                                    <a class="page-link" href="#">2</a>
+                              </li>
+                              <li class="page-item">
+                                    <a class="page-link" href="#">3</a>
+                              </li>
+                              <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                              </li>
+                        </ul>
+                  </nav>
+            </div>
+      </section>
 {% endblock main %}
