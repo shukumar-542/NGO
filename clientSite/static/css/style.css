@@ -5,7 +5,7 @@
       top: 0px;
       left: 0px;
       z-index: -1;    
-      height: 500px;
+      height: 600px;
       width: 100%;
       /* background-repeat: no-repeat; */
       background-position: center center;
@@ -14,15 +14,16 @@
       
   }
   #header{
-      height: 400px;
+      height: 600px;
   }
   
   .my-navbar::before{
       content: "";
-      background-color: rgba(0, 0, 0, 0.62);
+      background-color: #F7CA44;
       position: absolute;
       top: 0px;
       left: 0px;
+      
       z-index: -1;
       height: 100%;
       width: 100%;
@@ -35,6 +36,7 @@
 .navbar{
       z-index: 1;    
   }
+
 .nav-link:hover{
       color:  white;
       border-bottom: 2px solid rgb(233, 5, 5);
@@ -48,6 +50,58 @@
       line-height: 40px !important;
       font-size: 2rem;
   }
+
+
+
+
+  @media only screen and (max-width: 500px) {
+    .navbar-brand{
+        
+        font-size: 1.0rem;
+    }
+}
+@media only screen and (max-width: 577px) {
+    #about-top img{
+        width: auto;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .navbar-collapse{
+        padding: 10px;
+       background-color: rgba(0, 0, 0, 0.09);
+    }
+    .nav-link, .dropdown-item{
+        color: white;
+    }
+    .nav-link:focus, .nav-link:hover{
+        color: white;
+    }
+    .dropdown-menu{
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.097);
+    }
+    
+
+    .navbar-nav{
+         --bs-nav-link-hover-color:silver;       
+         
+    }
+    .dropdown-menu{
+        --bs-dropdown-link-active-bg:rgb(7, 7, 7);
+    }
+    #volunteers .col{
+        margin-bottom: 100px;
+    }
+}
+.navbar-nav{
+    --bs-nav-link-hover-color:silver;       
+    
+}
+.dropdown-menu{
+   --bs-dropdown-link-active-bg:rgb(7, 7, 7);
+}
 
 
 /* ABOUT PAGE */
@@ -69,10 +123,11 @@
             left: 0;
             z-index: -1;
       }
+     
   }
 
 .header-text{
-    color: #00ADB5;
+    color: #F7CA44;
     font-family: 'Poppins', sans-serif;
     font-weight: 600; 
 }
@@ -83,7 +138,7 @@
 
 
 .header-border{
-    border-bottom: 6px solid darkblue;
+    border-bottom: 6px solid #F7CA44;
     border-radius: 15px;
 }
 .vision-border{
@@ -123,7 +178,7 @@
     padding-top: 20px;
    }
    #volunteer .card:hover{
-    background-color: #03181a;
+    background-color: #F7CA44;
     color:#EEEEEE ;
 }
 
@@ -300,8 +355,9 @@
 
 
 .project-header{
-    color: rgb(14, 14, 240);
+    color: rgb(240, 214, 14);
     padding:0.2rem;
+    margin-top: 300px;
     padding-left: 1.5rem;
     background-color: rgb(166, 168, 163);   
 }
@@ -309,7 +365,7 @@
 /* image and video gallary */
 
 #vdo-gallery {
-    margin-top: 20px ;
+    margin-top: 150px ;
     width:100% !important;   
 }
 #vdo-gallery h1{
@@ -321,6 +377,93 @@
 }
 
 
+/* home page */
+#home-about{
+    margin-top: 60px;
+}
 
+ .about-left{
+    background-color: #F7CA44;
+    color:black;
+    margin:0 auto;
+    padding: 50px;
+    max-width: 500px;
+    min-height: auto;
+} 
+.about-left h4{
+    background:white;
+    padding: 5px 4px;
+    width: 60%;
+    text-align:center;
+}
+.about-left p{
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+.about-left button{
+    background-color: white;
+    color:black;
+    letter-spacing: 2px;
+    border-radius: 0px;
+}
+.about-left button:hover {
+    background-color: black;
+    color:white;
+    
+}
+.home-title{
+    color: #F7CA44;
+    margin-bottom: 30px;
+   
+}
+.about-right button{
+    background-color:#F7CA44;
+    color:white;
+    letter-spacing:2px;
+}
+.about-right button:hover{
+    background-color: black;
+    color:white;
+}
+
+/* EVENT HOME PAGE  */
+.home-header-text{
+    border-bottom: 2px solid #F7CA44;
+}
+.evnt-date{
+    background-color: #F7CA44;
+    padding: 2px;
+    color: white;
+    font-size: 1rem;
+    align-items: center;
+}
+.evnt-logo{
+    color: #F7CA44;
+    margin-right: 5px;
+}
+
+/* PROJECTS */
+
+#home-projects .project-button{
   
+   background-color: #F7CA44;
+   color:white;
+   padding: 4px 8px;
+   border-radius: 2px;
+   
+}
+#home-projects .project-button:hover{
+    color:#F7CA44;
+    background-color:black;
+    
+}
+
+
+
+/* Gallary */
+
+.iamge-new{
+    margin-top: 200px;
+}
+
 
