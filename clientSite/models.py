@@ -19,10 +19,11 @@ class Founder(models.Model):
 class Voluntieer(models.Model):
     first_name = models.CharField(max_length=70, null=False, blank=False)
     last_name = models.CharField(max_length=70, null=False, blank=False)
-    email = models.EmailField(max_length=250,null=True,blank=True)
-    phone = models.CharField(max_length=15, null=False, blank=False)
     about = models.TextField(null=True, blank=True)
-    social_links = models.TextField(null=True, blank=True)
+    phone = models.CharField(max_length=15, null=False, blank=False)
+    email = models.EmailField(max_length=250,null=True,blank=True)
+    facebook = models.URLField(max_length=250, null=True, blank=True)
+    linkedin = models.URLField(max_length=250, null=True, blank=True)
     image = models.ImageField(upload_to="volunteer/",
                             default="profile1.png")
 
@@ -73,6 +74,7 @@ class Project(models.Model):
     }
 
     title = models.CharField(max_length=200, null=False, blank=False)
+    donor_partner = models.CharField(max_length=250,null=False, blank=False)
     details = models.TextField(null=False, blank=False)
     start_date = models.DateTimeField(null=False, blank=False)
     end_date = models.DateTimeField(null=True, blank=True)

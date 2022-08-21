@@ -17,66 +17,21 @@
                       </tr>
                   </thead>
                   <tbody>
-                      <tr>
-                          <td>1981-1992</td>
-                          <td>Al-Falah Model Clinic</td>
-                          <td>Local Well Wishers ODA, UK</td>
-                      </tr>
-                      <tr>
-                          <td>1992-2000</td>
-                          <td>Al-Falah Model Clinic</td>
-                          <td>Bangladesh Population Health Consortium (BPHC)</td>
-  
-                      </tr>
-                      <tr>
-                          <td>1994-1995</td>
-                          <td>Women Development Program</td>
-                          <td>Australian High Commission, Dhaka</td>
-  
-                      </tr>
-                      <tr>
-                          <td>1996-2002</td>
-                          <td>STD/AIDS Prevention Program</td>
-                          <td>HIV/AIDS & STI Alliance, Bangladesh (HASAB)</td>
-  
-                      </tr>
-                      <tr>
-                          <td>2004-2006</td>
-                          <td>STD/AIDS Prevention Program</td>
-                          <td>UNICEF, Dhaka</td>
-  
-                      </tr>
-                      <tr>
-                          <td>2004-2006</td>
-                          <td>Mobilizing Human Rights Support for the Bihari
-                              Community in Bangladesh</td>
-                          <td>Manusher Jonno Foundation (MJF)</td>
-  
-                      </tr>
-                      <tr>
-                          <td>Content 7</td>
-                          <td>Content 7</td>
-                          <td>Content 7</td>
-  
-                      </tr>
-                      <tr>
-                          <td>Content 8</td>
-                          <td>Content 8</td>
-                          <td>Content 8</td>
-  
-                      </tr>
-                      <tr>
-                          <td>Content 9</td>
-                          <td>Content 9</td>
-                          <td>Content 9</td>
-  
-                      </tr>
-                      <tr>
-                          <td>Content 10</td>
-                          <td>Content 10</td>
-                          <td>Content 10</td>
-  
-                      </tr>
+                    {% if donor_project %}
+                        {% for donor in donor_project %}
+                        <tr>
+                            <td>{{donor.start_date |date:"Y"}}- {% if donor.end_date %}
+                                {{donor.end_date |date:"Y"}}
+                                {% else %} <span>Ongoing</span>
+                                {% endif %} </td>
+                            <td>{{donor.title}}</td>
+                            <td>{{donor.donor_partner}}</td>
+                        </tr>
+                        {% endfor %}
+                    {% endif %}
+
+                      
+                      
                   <tbody>
               </table>
   
@@ -105,66 +60,19 @@
                       </tr>
                   </thead>
                   <tbody>
-                      <tr>
-                          <td>1981-1992</td>
-                          <td>Al-Falah Model Clinic</td>
-                          <td>Local Well Wishers ODA, UK</td>
-                      </tr>
-                      <tr>
-                          <td>1992-2000</td>
-                          <td>Al-Falah Model Clinic</td>
-                          <td>Bangladesh Population Health Consortium (BPHC)</td>
-  
-                      </tr>
-                      <tr>
-                          <td>1994-1995</td>
-                          <td>Women Development Program</td>
-                          <td>Australian High Commission, Dhaka</td>
-  
-                      </tr>
-                      <tr>
-                          <td>1996-2002</td>
-                          <td>STD/AIDS Prevention Program</td>
-                          <td>HIV/AIDS & STI Alliance, Bangladesh (HASAB)</td>
-  
-                      </tr>
-                      <tr>
-                          <td>2004-2006</td>
-                          <td>STD/AIDS Prevention Program</td>
-                          <td>UNICEF, Dhaka</td>
-  
-                      </tr>
-                      <tr>
-                          <td>2004-2006</td>
-                          <td>Mobilizing Human Rights Support for the Bihari
-                              Community in Bangladesh</td>
-                          <td>Manusher Jonno Foundation (MJF)</td>
-  
-                      </tr>
-                      <tr>
-                          <td>Content 7</td>
-                          <td>Content 7</td>
-                          <td>Content 7</td>
-  
-                      </tr>
-                      <tr>
-                          <td>Content 8</td>
-                          <td>Content 8</td>
-                          <td>Content 8</td>
-  
-                      </tr>
-                      <tr>
-                          <td>Content 9</td>
-                          <td>Content 9</td>
-                          <td>Content 9</td>
-  
-                      </tr>
-                      <tr>
-                          <td>Content 10</td>
-                          <td>Content 10</td>
-                          <td>Content 10</td>
-  
-                      </tr>
+                    {% if pratner_project %}
+                    {% for partner in pratner_project %}
+                    <tr>
+                        <td>{{partner.start_date |date:"Y"}}- {% if partner.end_date %}
+                            {{partner.end_date |date:"Y"}}
+                            {% else %} <span>Ongoing</span>
+                            {% endif %} </td>
+                        <td>{{partner.title}}</td>
+                        <td>{{partner.donor_partner}}</td>
+                    </tr>
+                    {% endfor %}
+                {% endif %}
+                      
                   <tbody>
               </table>
   

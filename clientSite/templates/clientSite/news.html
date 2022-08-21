@@ -54,52 +54,42 @@
   
       <section id="news-container" class="container my-5">
           <h1 class="header-text">NEWS</h1>
-  
-          <div class="d-flex justify-content-center">
-              <div class="card border-0 mb-5" style="width: 80%">
-                  <img src="{% static 'images\saap.jpg' %}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                      <p><i class="bi bi-calendar-event"></i><small class="text-muted"> 12 Dec, 2017</small></p>
-                      <h4 class="card-title">Press Conference on Population and Housing Census 2022</h4>
-                      <p class="card-text text-secondary">Counting persons with disabilities in the Population and
-                          Housing
-                          Census 2022 those
-                          are left uncounted Access Bangladesh Foundation in association with Disability Rights Fund,
-                          DCF,
-                          NCDW, Sitakund Fedaration</p>
-                      <a href="#" class="card-link">Read more</a>
-                  </div>
-              </div>
-          </div>
-  
-          <div class="d-flex justify-content-center">
-              <div class="card border-0 mb-5" style="width: 80%">
-                  <img src="{% static 'images\meet.jpg' %}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                      <p><i class="bi bi-calendar-event"></i><small class="text-muted"> 12 Dec, 2017</small></p>
-                      <h4 class="card-title">Post Budget Reaction Meeting 2022-23</h4>
-                      <p class="card-text text-secondary">Insufficient budget allocation in addressing the needs of
-                          persons
-                          with disabilities Access Bangladesh Foundation arranged a post-budget reaction meeting on
-                          “National
-                          Budget 2022-23: Status of persons with disabilities”</p>
-                      <a href="#" class="card-link">Read more</a>
-                  </div>
-              </div>
-          </div>
+            {% if newsandevents_list  %}
+                {% for n in newsandevents_list  %}
+                <div class="d-flex justify-content-center">
+                    <div class="card border-0 mb-5" style="width: 80%">
+                        <img src="{{n.image.url}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p><i class="bi bi-calendar-event"></i><small class="text-muted">{{n.date|date:"d M, Y"}}</small></p>
+                            <h4 class="card-title">{{n.title}}</h4>
+                            <p class="card-text text-secondary">{{n.description| truncatechars:200}}</p>
+                            <a href="#" class="card-link">Read more</a>
+                        </div>
+                    </div>
+                </div>
+        
+                {% endfor %}
+            {% endif %}
+          
   
   
           <nav aria-label="Page navigation example">
               <ul class="pagination justify-content-end">
-                  <li class="page-item disabled">
-                      <a class="page-link">Previous</a>
-                  </li>
+                {% if page_obj.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                </li>
+                {% endif %}
+               
+              
                   <li class="page-item"><a class="page-link" href="#">1</a></li>
                   <li class="page-item"><a class="page-link" href="#">2</a></li>
                   <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  {% if page_obj.has_next %}
                   <li class="page-item">
-                      <a class="page-link" href="#">Next</a>
-                  </li>
+                    <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+                </li>
+                  {% endif %}
               </ul>
           </nav>
       </section>

@@ -154,133 +154,63 @@
       </div>
     </div>
   </section>
+
+  {% comment %} Founder {% endcomment %}
+
   <section id='founder' class="my-5">
     <div class="container border-bottom">
       <h1 class="text-center header-text mb-5">FOUNDERS</h1>
       <div class="py-5">
         <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col">
-            <div class="card h-100">
-              <img src="{% static 'images/founder3.jpg' %}"
-                   class="card-img-top"
-                   alt="...">
-              <div class="card-body text-center">
-                <h5 class="card-title ">Dipankar Barman</h5>
-                <p class="card-text">
-                  <small>FOUNDER CHAIPERSON</small>
-                </p>
+          {% if founder_list %}
+            {% for f in founder_list %}
+            <div class="col">
+              <div class="card h-100">
+                <img src="{{f.image.url}}"
+                     class="card-img-top"
+                     alt="...">
+                <div class="card-body text-center">
+                  <h5 class="card-title text-uppercase">{{f.first_name}} {{f.last_name}}</h5>
+                  <p class="card-text">
+                    <small class="text-uppercase">{{f.designation}}</small>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="{% static 'images/founder2.jpg' %}"
-                   class="card-img-top"
-                   alt="...">
-              <div class="card-body text-center">
-                <h5 class="card-title">Shukumar Ghosh</h5>
-                <p class="card-text">
-                  <small>FOUNDER PRESIDENT</small>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="{% static 'images/founder1.jpg' %}"
-                   class="card-img-top"
-                   alt="...">
-              <div class="card-body text-center">
-                <h5 class="card-title">Salman Shakib</h5>
-                <p class="card-text">
-                  <small>TRESAURER</small>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+            {% endfor %}
+          {% endif %}
+          
+          
   </section>
+
+  {% comment %} volunteers {% endcomment %}
+
   <section id="volunteer" class='my-5'>
     <div class="conteiner-fluid border-bottom">
       <h1 class='header-text text-center py-5'>VOLUNTEERS</h1>
       <div class="py-5">
         <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1">
+          {% if voluntieer_list %}
+          {% for v in voluntieer_list %}
           <div class="col">
             <div class="card h-100">
-              <img src="{% static 'images/founder1.jpg' %}" 
+              <img src="{{v.image.url}}" 
                    class="card-img-top volunteer-img">
               <div class="card-body text-center">
-                <h5 class="card-title">Dipankar Barman</h5>
+                <h5 class="card-title text-uppercase">{{v.first_name}}{{v.last_name}}</h5>
                 <p class="card-text volunteer">
                   volunteers.
                 </p>
                 <div class="card-text">
-                  <a class="icon-color me-2" href=""><i class="bi bi-twitter"></i></a>
-                  <a class="icon-color me-2" href="#"><i class="bi bi-facebook"></i></a>
-                  <a class="icon-color me-2" href="#"><i class="bi bi-envelope-fill"></i></a>
-                  <a class="icon-color" href="#"><i class="bi bi-instagram"></i></a>
+                  <a class="icon-color me-2" href="{{v.facebook}}"><i class="bi bi-facebook"></i></a>
+                  <a class="icon-color me-2" href="{{v.email}}"><i class="bi bi-envelope-fill"></i></a>
+                  <a class="icon-color" href="{{v.linkedin}}"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="{% static 'images/founder2.jpg' %}"
-                   class="card-img-top volunteer-img"
-                   alt="...">
-              <div class="card-body text-center">
-                <h5 class="card-title">Shukumar Ghosh</h5>
-                <p class="card-text volunteer">
-                  volunteers.
-                </p>
-                <div class="card-text">
-                  <a class="icon-color me-2" href=""><i class="bi bi-twitter"></i></a>
-                  <a class="icon-color me-2" href="#"><i class="bi bi-facebook"></i></a>
-                  <a class="icon-color me-2" href="#"><i class="bi bi-envelope-fill"></i></a>
-                  <a class="icon-color" href="#"><i class="bi bi-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="{% static 'images/founder3.jpg' %}"
-                   class="card-img-top volunteer-img"
-                   alt="...">
-              <div class="card-body text-center">
-                <h5 class="card-title">Sadman Shakib</h5>
-                <p class="card-text volunteer">
-                  volunteers.
-                </p>
-                <div class="card-text">
-                  <a class="icon-color me-2" href=""><i class="bi bi-twitter"></i></a>
-                  <a class="icon-color me-2" href="#"><i class="bi bi-facebook"></i></a>
-                  <a class="icon-color me-2" href="#"><i class="bi bi-envelope-fill"></i></a>
-                  <a class="icon-color" href="#"><i class="bi bi-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              
-              <img class="card-img-top volunteer-img" src="{% static 'images/founder1.jpg' %}"  style="height:90%; width:70%; border-radius:50%">
-              <div class="card-body text-center">
-                <h5 class="card-title">Arifur Rahaman</h5>
-                <p class="card-text volunteer">
-                  volunteers.
-                </p>
-                <div class="card-text">
-                  <a class="icon-color me-2" href=""><i class="bi bi-twitter"></i></a>
-                  <a class="icon-color me-2" href="#"><i class="bi bi-facebook"></i></a>
-                  <a class="icon-color me-2" href="#"><i class="bi bi-envelope-fill"></i></a>
-                  <a class="icon-color" href="#"><i class="bi bi-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
+        {% endif %}
         </div>
       </div>
     </div>
